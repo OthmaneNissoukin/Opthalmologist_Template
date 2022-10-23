@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;800&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    box-sizing: border-box;
+}
+header.location {
+    height: 40px;
+    background-color: black;
+    display: none;
+}
+header.top-header {
+    padding: 8px 30px;
+    background-color: #fff;
+}
+div.holder {
+    max-width: 1200px;
+    margin: auto;
+}
+header.top-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header.top-header nav img {
+    height: 50px;
+    width: 120px;
+}
+header.top-header nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 0px 15px;
+}
+@media (max-width: 700px) {
+    header.top-header nav ul {
+        display: none;
+    }
+}
+
+/* Start Landing */
+section.landing {
+    background-color: bisque;
+    min-height: 450px;
+    background-image: linear-gradient(#00285696, #00285696), url("images/land.webp");
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+}
+@media (max-width: 1000px) {
+    section.landing {
+        background-size: 150% 100%;
+    }
+}
+section.landing div.land-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 30px;
+    color: #fff;
+    width: 300px;
+}
+section.landing div.land-content h2 {
+    font-style: italic;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+section.landing div.land-content a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 32px;
+    background-color: #1DA1F2;
+}
+
+/* Landing Features */
+section.features {
+    background-color: #002856;
+    min-height: 95px;
+    margin-top: -95px;
+    z-index: 1;
+}
+section.features div.feat-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    padding: 8px 0px;
+}
+section.features div.feat-container div.feat {
+    /* background-color: crimson; */
+    min-height: 20px;
+    padding: 8px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+section.features div.feat-container div.feat span {
+    display: block;
+    line-height: 1.2;
+    color: #fff;
+}
+section.features div.feat-container div.feat span i {
+    font-size: 40px;
+    color: #fff;
+}
+@media (max-width: 1116px) {
+    section.features {
+        margin-top: 0;
+    }
+}
+/* Services */
+article div.service-title {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+}
+article div.srv div.service-title {
+    margin-top: 20px;
+    color: black !important;
+}
+article div.service-title hr {
+    width: 50%;
+    margin: auto;
+}
+article section.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 350px));
+    gap: 10px;
+    padding: 30px;
+    justify-content: center;
+}
+article section.services div.service {
+    height: 250px;
+    /* background-color: antiquewhite; */
+    overflow: hidden;
+    position: relative;
+}
+article section.services div.service img {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+article section.services div.service div, div.doctor-info {
+    position: absolute;
+    /* background-color: rgba(128, 0, 128, 0.87); */
+    background-color: #002856ec;
+    width: 100%;
+    padding: 8px 16px;
+    color: #fff;
+    z-index: 1;
+    left: 0;
+    bottom: -60px;
+    transition: all 200ms linear;
+}
+div.service:hover .service-info, div.doctor-box:hover .doctor-info {
+    bottom: 0px;
+    transition: all 200ms linear;
+}
+article div.slider {
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+article div.slider span {
+    display: block;
+}
+article div.slider span.left, article div.slider span.right {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #002856ec;
+    color: #10cab7;
+    border-radius: 50%;
+    text-align: center;
+}
+article div.slider span.current {
+    border: 3px solid #002856ec;
+    border-radius: 8px;
+    padding: 0px 32px;
+    color: #002856ec;
+}
+
+/* Starting Feedback */
+article section.feedback, 
+article section.newsletter-section,
+article section.partners {
+    margin-top: 50px;
+    padding: 50px 30px;
+    background-size: cover;
+}
+article section.feedback {
+    background-image: linear-gradient(#002856ec, #002856ec), url("images/tool.jpg");
+}
+article div.srv {
+    padding: 0px 30px;
+}
+article div.srv div.service-title,
+article section.feedback div.service-title,
+article section.newsletter-section div.service-title,
+article section.partners div.service-title{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+article div.service-title h2 {
+    font-size: 19px;
+    text-transform: uppercase;
+}
+article section.feedback div.service-title p,
+article section.newsletter-section div.service-title p {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+/* Boxes */
+article section.feedback div.feed-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
+    padding: 0px 30px;
+    gap: 10px;
+    justify-content: center;
+}
+article section.feedback div.feed-container div.box {
+    /* height: 150px; */
+    /* background-color: #10cab7; */
+    display: flex;
+    padding: 20px 10px;
+    align-items: center;
+    gap: 10px;
+}
+article section.feedback div.feed-container div.box span {
+    display: block;
+    padding: 10px;
+    font-size: 50px;
+    /* background-color: crimson; */
+    color: #10cab7;
+}
+article section.feedback div.feed-container div.box div.feed-content {
+    color: #fff;
+}
+article section.feedback div.feed-container div.box div.feed-content h4 {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+article section.feedback div.feed-container div.box div.feed-content p {
+    line-height: 1.2;
+}
+article section.feedback div.feed-more {
+    margin-top: 30px;
+    text-align: center;
+}
+article section.feedback div.feed-more a{
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 64px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    transition: all 250ms ease-in;
+}
+article section.feedback div.feed-more a:hover {
+    /* background-color: #1DA1F2; */
+    color: #002856;
+    background-color: #fff;
+}
+
+/* Doctors */
+article section.doctors {
+    margin-top: 50px;
+    padding: 0px 30px;
+    margin-bottom: 50px;
+}
+article section.doctors div.service-title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+article section.doctors div.doctors-gallery {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    justify-content: center;
+}
+article section.doctors div.doctors-gallery div.doctor-box {
+    height: 320px;
+    background-color: #10cab7;
+    overflow: hidden;
+    position: relative;
+}
+article section.doctors div.doctors-gallery div.doctor-box h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+article section.doctors div.doctors-gallery div.doctor-box img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Newsletter */
+article section.newsletter-section {
+    background-image: linear-gradient(#002856ec, #002856ec), url("images/glasses.jpg");
+}
+article section.newsletter-section div.newsletter form {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+}
+article section.newsletter-section div.newsletter form input {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    flex: 1;
+}
+article section.newsletter-section div.newsletter form input[type="submit"] {
+    background-color: #1DA1F2;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: all 250ms linear;
+}
+article section.newsletter-section div.newsletter form input[type="submit"]:hover {
+    background-color: #1a77b1;
+}
+article section.newsletter-section div.newsletter form input::placeholder{
+    color: rgba(255, 255, 255, 0.699);
+}
+article section.newsletter-section div.newsletter form input:not(input[type="submit"]) {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+article section.newsletter-section div.newsletter form input:not(input[type="submit"]):focus {
+    outline: none;
+}
+@media (max-width: 663px) {
+    article section.newsletter-section div.newsletter form {
+        flex-direction: column;
+    }
+}
+
+/* Parnters */
+article section.partners {
+    padding: 0px 30px;
+}
+article section.partners div.service-title {
+    color: unset;
+}
+article section.partners div.partner-gallery {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 200px));
+    justify-content: center;
+}
+article section.partners div.partner-gallery div {
+    height: 150px;
+    /* background-color: #10cab7; */
+}
+article section.partners div.partner-gallery div img {
+    height: 100%;
+    width: 100%;
+    filter: grayscale(100);
+}
+article section.partners div.partner-gallery div img:hover {
+    filter: grayscale(0);
+}
+
+article section.partners div.partner-gallery div #ziemer {
+    height: auto;
+    transform: translateY(20px);
+}
+
+article section.partners div.partner-gallery div #topcon {
+    height: auto;
+}
+
+/* Starting Footer */
+footer {
+    margin-top: 60px;
+    background-image: linear-gradient(#002856ec, #002856ec), url("images/indoor.jpg");
+    padding: 60px 0px;
+    background-size: cover;
+}
+footer div.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 250px));
+    gap: 20px;
+    justify-content: center;
+    padding: 0px 30px;
+}
+footer div.footer-links div {
+    /* background-color: #10cab7; */
+    color: #fff;
+    padding: 10px;
+}
+footer div.footer-links div h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+footer div.footer-links div ul li{
+    list-style: none;
+}
+footer div.footer-links div ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+footer div.footer-links div ul li a span {
+    font-weight: 700;
+}
+footer div.footer-links div ul li img{
+    height: 100px;
+    transform: translateX(25px);
+}
+footer hr {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    border-color: rgba(255, 255, 255, 0.322);
+}
+footer div.extra-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.699);
+    row-gap: 20px;
+    padding: 0px 30px;
+}
+footer div.extra-info ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0px 20px;
+}
+footer div.extra-info ul li a {
+    color: rgba(255, 255, 255, 0.699);
+    text-decoration: none;
+}
+footer div.extra-info ul li a:hover {
+    color: #fff;
+}
+@media (max-width: 670px) {
+    footer div.extra-info { 
+        justify-content: center;
+    }
+}
