@@ -35,6 +35,11 @@ header.top-header nav ul li {
     list-style: none;
     padding: 0px 15px;
 }
+header.top-header nav ul li a{
+    text-decoration: none;
+    color: unset;
+    font-weight: 600;
+}
 header.top-header nav span.menu i{
     display: none;
 }
@@ -59,7 +64,6 @@ header.top-header nav span.menu i{
         left: -30px;
         background-color: #fff;
         width: calc(100% + 60px);
-        padding: 10px 30px;
     }
     .menu:hover .lists li {
         display: block;
@@ -68,6 +72,12 @@ header.top-header nav span.menu i{
     header.top-header nav ul li:hover {
         background-color: #002856;
         color: #fff;
+    }
+    header.top-header nav ul li a{
+        font-size: 18px;
+        padding: 10px 30px;
+        display: block;
+        width: 100%;
     }
 }
 
@@ -199,19 +209,32 @@ article div.slider {
 article div.slider span {
     display: block;
 }
-article div.slider span.left, article div.slider span.right {
+article div.slider a.left, article div.slider a.right {
     width: 30px;
     height: 30px;
     border: 1px solid #002856ec;
     color: #10cab7;
     border-radius: 50%;
     text-align: center;
+    text-decoration: none;
 }
-article div.slider span.current {
+article div.slider a.current {
     border: 3px solid #002856ec;
     border-radius: 8px;
     padding: 0px 32px;
     color: #002856ec;
+    text-decoration: none;
+}
+
+/* Creating link boxes */
+article section.services div.service a {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 /* Starting Feedback */
