@@ -38,7 +38,6 @@ header.top-header nav ul li {
 header.top-header nav span.menu i{
     display: none;
 }
-
 @media (max-width: 750px) {
     header.top-header nav span.menu i {
         display: block;
